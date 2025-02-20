@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Formation Dev Web</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <img src="logosDclicEtOif.webp" alt="Logos de D-CLIC et de l'OIF"> 
+        <h1>Formulaire d'inscription à la formation Dev Web du programme D-CLIC</h1>
+        <form id="registrationForm">
+            <label for="nom">Nom :</label>
+            <input type="text" name="nom" id="nom" required>
+
+            <label for="prenoms">Prénoms :</label>
+            <input type="text" name="prenoms" id="prenoms" required>
+
+            <label for="dob">Date de naissance :</label>
+            <input type="date" name="dob" id="dob" required>
+
+            <label for="email">Email :</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="telephone">Numéro de téléphone :</label>
+            <input type="tel" name="telephone" id="telephone" pattern="01[0-9]{8}" required>
+
+            <label for="motivation">Motivation :</label>
+            <textarea name="motivation" id="motivation" minlength="1000" maxlength="2500" required></textarea>
+
+            <button type="submit">S'inscrire</button>
+        </form>
+        <div id="confirmation" class="hidden">
+            <h2>Inscription réussie !</h2>
+            <p><strong>Nom :</strong> <span id="confNom"></span></p>
+            <p><strong>Prénoms :</strong> <span id="confPrenoms"></span></p>
+            <p><strong>Date de naissance :</strong> <span id="confDob"></span></p>
+            <p><strong>Email :</strong> <span id="confEmail"></span></p>
+            <p><strong>Numéro de téléphone :</strong> <span id="confTelephone"></span></p>
+            <p><strong>Motivation :</strong> <span id="confMotivation"></span></p>
+        </div>
+    </div>
+</body>
+</html>
